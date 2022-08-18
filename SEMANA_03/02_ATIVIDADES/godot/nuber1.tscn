@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://atvgithub.gd" type="Script" id=1]
+[ext_resource path="res://PressStart2P.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 26.0
+margin_top = 460.0
+margin_right = 144.0
+margin_bottom = 494.0
+custom_fonts/font = SubResource( 1 )
+text = "Voltar"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 49.0
+margin_top = 51.0
+margin_right = 581.0
+margin_bottom = 201.0
+custom_fonts/font = SubResource( 2 )
+text = "LISTA DE INTEGRANTES:
+
+°Marcos
+°Duda
+°Lucas
+°Vini
+°Arthut
+°Celine
+°Stefan
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
